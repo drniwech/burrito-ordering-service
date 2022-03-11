@@ -2,7 +2,7 @@ package com.generali.burritoorderingservice;
 
 import com.generali.burritoorderingservice.dao.OrderRepository;
 import com.generali.burritoorderingservice.model.*;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -28,25 +28,27 @@ public class TheOrderRepositoryTests {
 
 		TheOrder dbOrder = entityManager.persist(theOrder);
 
-		Assert.assertEquals(theOrder.getDescription(), dbOrder.getDescription());
-		Assert.assertEquals(theOrder.getProtein().getType(), dbOrder.getProtein().getType());
+		Assertions.assertEquals(theOrder.getDescription(), dbOrder.getDescription());
+
+		Assertions.assertEquals(theOrder.getProtein().getType(), dbOrder.getProtein().getType());
 
 		List<TheOrder> theOrders = repository.findByDescription(theOrder.getDescription());
 
 		assertThat(theOrders).extracting(TheOrder::getDescription).containsOnly(theOrder.getDescription());
 	}
+
 	@Test
 	public void testFindById(){
 		TheOrder theOrder = TestUtil.buildOrder("second order");
 
 		TheOrder dbOrder = entityManager.persist(theOrder);
 
-		Assert.assertEquals(theOrder.getId(), dbOrder.getId());
-		Assert.assertEquals(theOrder.getDescription(), dbOrder.getDescription());
-		Assert.assertEquals(theOrder.getProtein().getType(), dbOrder.getProtein().getType());
+		Assertions.assertEquals(theOrder.getId(), dbOrder.getId());
+		Assertions.assertEquals(theOrder.getDescription(), dbOrder.getDescription());
+		Assertions.assertEquals(theOrder.getProtein().getType(), dbOrder.getProtein().getType());
 
 		TheOrder foundOrder = repository.findById(dbOrder.getId()).get();
-		Assert.assertEquals(dbOrder.getDescription(), foundOrder.getDescription());
+		Assertions.assertEquals(dbOrder.getDescription(), foundOrder.getDescription());
 	}
 
 }
