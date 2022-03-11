@@ -33,7 +33,7 @@ An order consists of:
 
 # Bonus
 * Address security, availability, performance
-* Postman test collection
+* Postman test collection: json file under src/test/postman/OrderCollection.postman_collection.json
 
 # Footnotes
 1. Prefer Java over Kotlin

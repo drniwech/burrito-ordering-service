@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "dc96f467-b3b1-4aeb-bbac-be3fc8834a68",
+		"name": "OrderCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST New Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": null,\n    \"description\": \"first order\",\n    \"protein\": {\n        \"id\": null,\n        \"type\": \"Chicken\",\n        \"theOrder\": null\n    },\n    \"tortilla\": {\n        \"id\": null,\n        \"type\": \"corn\",\n        \"theOrder\": null\n    },\n    \"salsa\": {\n        \"id\": null,\n        \"spicyLevel\": \"hot\",\n        \"theOrder\": null\n    },\n    \"vegetables\": [\n        {\n            \"id\": null,\n            \"name\": \"cabbage\"\n        }\n    ],\n    \"extras\": [\n        {\n            \"id\": null,\n            \"type\": \"avocado\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
