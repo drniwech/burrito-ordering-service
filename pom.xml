@@ -30,9 +30,17 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<!--MVC-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!--Spring Web Reactive module is a non-blocking client and it belongs to the spring-webflux library.
+		 The solution offers support for both synchronous and asynchronous operations,
+		 making it suitable also for applications running on a Servlet Stack-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
 
 		<dependency>

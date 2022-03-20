@@ -26,6 +26,26 @@
 			"response": []
 		},
 		{
+			"name": "GET Order Reactive",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "POST New Order",
 			"request": {
 				"method": "POST",
@@ -48,6 +68,26 @@
 					"port": "8080",
 					"path": [
 						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Orders Reactively",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reactive/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reactive",
+						"all"
 					]
 				}
 			},

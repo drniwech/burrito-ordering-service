@@ -37,7 +37,8 @@ public class TheOrder {
             cascade = CascadeType.ALL)
     private Salsa salsa;
 
-    @OneToMany(mappedBy = "theOrder", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "theOrder", fetch = FetchType.EAGER, //TODO: fix JSON failed to lazily init a collection.
+            cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private Set<Vegetable> vegetables = new HashSet<>();
 
@@ -51,7 +52,8 @@ public class TheOrder {
         vegetable.setTheOrder(null);
     }
 
-    @OneToMany(mappedBy = "theOrder", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "theOrder", fetch = FetchType.EAGER, //TODO: fix JSON failed to lazily init a collection.
+            cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private Set<Extra> extras = new HashSet<>();
 

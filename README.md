@@ -38,3 +38,13 @@ An order consists of:
 
 # Footnotes
 1. Prefer Java over Kotlin
+
+# Tech Stacks
+1. Spring Data JPA v.2.5.9
+2. H2 db v.1.4.200
+3. Jackson v.2.12.6
+4. Spring Boot v.2.5.10
+5. Spring Web Reactive v.5.3.16
+6. Spring actuator v.2.5.10
+7. Lombok v.1.2.10
+8. Slf4j v.1.7.36
